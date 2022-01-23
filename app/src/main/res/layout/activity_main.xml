@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- relative layout :  est une disposition qui organise les vues/widgets/viewGroup en fonction de la position des autres
+vues/widgets/viewGroups, c'est-à-dire que les nouvelles vues sont placées par rapport aux vues déjà existantes.  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    android:gravity="center"
+    android:background="@drawable/border"
+    >
+    <!-- match_parent:  la bordure de la vue enfant se développe pour correspondre à la bordure de la vue parent-->
+    <!-- fill_parent: c'est la meme que match_parent ,(obsolète et renommé MATCH_PARENTen API niveau 8 et supérieur) -->
+    <!-- wrap_content: la bordure de la vue enfant se développe pour correspondre à la bordure de la vue parent.-->
+
+    <TextView
+        android:id="@+id/main_textview_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_weight="2"
+        android:gravity="center"
+
+        android:padding="8dp"
+        android:text="Welcome to QuizStar!"
+        android:textColor="#AD1457"
+        android:textSize="32dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="145dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Email" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:text="Login"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:text="Register"/>
+
+    <!--a partir de button -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="273dp"
+        android:layout_below="@+id/btn_register"
+        app:srcCompat="@drawable/_2438641_colorful_cute_happy_face_expression_vector_illustration" />
+</RelativeLayout>
+<!--
+android:layout_toLeftOf="@id/username"
+    indique à la nouvelle vue que vous devez être sur le côté gauche de la vue dont l'identifiant est username.
+android:layout_above="@id/user"
+    indique à la nouvelle vue que vous devez être au-dessus de la vue dont l'identifiant est user. -->
+<!-- difference entre :
+android:Layout_width="125dip" : Spécifie que la largeur de base de la vue est 125 dip.
+android:padding="4dip" : utilisé pour ajouter un espace vide de 4 dip entre une vue et son contenu. -->
+ <!--
+ Layout_alignParentTop="true" :
+    cette vue restera en haut de son parent. Étant donné que le parent couvre donc tout l'écran du mobile,
+    la vue apparaîtra collée en haut  de l'écran du mobile.
+android:layout_alignParentBottom="true" :
+    cette vue restera au bas de son parent. Étant donné que notre parent couvre tout l'écran du mobile,
+    la vue apparaîtra collée au bas de l'écran du mobile.
+android:layout_alignParentRight="true" :
+   cette vue restera à droite de son parent.
+-->

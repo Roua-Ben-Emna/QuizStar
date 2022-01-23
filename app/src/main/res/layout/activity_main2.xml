@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--LinearLayout :
+    organise les vues enfant dans une seule rangée,
+    en fonction de l'orientation spécifiée. L'orientation par défaut
+    est verticale, ce qui aligne les vues dans une seule colonne. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+
+  <TextView
+      android:id="@+id/welcome"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="center"
+      android:textStyle="bold"
+      android:textColor="#22466E"
+      android:textSize="32dp"
+
+      />
+
+  <TextView
+      android:id="@+id/maxScore"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp"
+      android:gravity="center"
+
+      android:textColor="#C62828"
+      android:textSize="30dp"
+      android:textStyle="italic" />
+
+  <ImageView
+      android:id="@+id/abutton"
+      android:layout_width="261dp"
+      android:layout_height="189dp"
+      android:gravity="center"
+      app:srcCompat="@drawable/start_png_44886" />
+  <Button
+      android:id="@+id/idBtnLogout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_centerHorizontal="true"
+      android:ems="10"
+      android:text="Logout"/>
+
+</LinearLayout>

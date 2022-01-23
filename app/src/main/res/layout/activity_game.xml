@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--scroll view :Un groupe de vues qui permet de faire défiler la hiérarchie des vues qu'il contient. La vue de défilement
+ne peut contenir qu'un seul enfant direct. Pour ajouter plusieurs vues dans la vue de défilement, faites de l'enfant
+ direct que vous ajoutez un groupe de vues, par exemple LinearLayout, et placez des vues supplémentaires dans ce
+LinearLayout. -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myScrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:id="@+id/myLinearLayoutVertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/main_textview_greeting2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:gravity="center"
+            android:text="3 levels of questions,you will get 10 questions to solve  , 1 point for each correct answer.
+think before answering !!"
+            android:textColor="#C62828"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <LinearLayout
+            android:id="@+id/myLinearLayoutHorizontal1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="easy"
+                android:textStyle="bold"
+                ></Button>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:background="#C9ECEF"
+                android:text="10 Quiz"
+                android:textSize="45dip"
+               />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myLinearLayoutHorizontal2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="normal"
+                android:textStyle="bold">
+
+            </Button>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:background="#C9ECEF"
+                android:text="20 Quiz"
+                android:textSize="45dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myLinearLayoutHorizontal3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="difficult"
+                android:textStyle="bold"></Button>
+<!-- style -->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:background="#C9ECEF"
+                android:text="30 Quiz"
+                android:textSize="45dip" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:layout_below="@+id/main_button_play"
+            app:srcCompat="@drawable/ref" />
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/btn_register"
+            android:text="cancel"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+</ScrollView>
